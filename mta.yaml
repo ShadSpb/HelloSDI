@@ -8,9 +8,30 @@ modules:
    path: HelloSDI
    requires:
     - name: hdi_HelloSDI
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
 
 resources:
  - name: hdi_HelloSDI
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: CUPS_LOCAL_HANA
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

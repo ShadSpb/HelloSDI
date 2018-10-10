@@ -1,0 +1,1 @@
+VIRTUAL TABLE "HelloCustomer.HelloSDI::HelloVirtualTalbe" AT "LOCAL_HANA"."''"."SYSTEM_OLD"."TWITTER_STREAM" 

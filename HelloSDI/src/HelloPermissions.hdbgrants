@@ -1,0 +1,10 @@
+{
+  "CUPS_LOCAL_HANA": {
+   "object_owner": { 
+      "roles": ["LOCAL_HANA_ROLE_G"]
+    },
+    "application_user": {
+      "roles": ["LOCAL_HANA_ROLE"]
+    }
+  }
+}
